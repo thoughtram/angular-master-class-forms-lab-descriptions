@@ -8,7 +8,7 @@ Let's enhance our `ContactsCreatorComponent` to have multiple form controls for 
 
 1. Replace the `phone` form control markup with the following template:
 
-   ```
+```
   <div formArrayName="phone">
     <div *ngFor="ITERATE_OVER_PHONE_CONTROLS_HERE">
       <md-input-container>
@@ -18,7 +18,7 @@ Let's enhance our `ContactsCreatorComponent` to have multiple form controls for 
       <button md-icon-button type="button" *ngIf="l && phone.value != ''" (click)="addPhoneField()"><md-icon>add_circle_outline</md-icon></button>
     </div>
   </div>
-   ```
+```
 2. Change `phone` field in `ContactsCreatorComponent` to `FormArray` using `FormBuilder` APIs
 3. Add a `removePhoneField(i)` method to `ContactsCreatorComponent` that removes a phone form control from the list by given index
 4. Add a `addPhoneField()` method to `ContactsCreatorComponent` that adds a new control to the form control collection
