@@ -103,7 +103,7 @@ We can list and edit our contacts, but we don't have a way to add new ones. That
   }
   ```
 
-7. Get an `ngForm` reference in the template and use it's value property to submit data on save (`(ngSubmit)="save(contact)"`).
+7. Get an `ngForm` reference (`#form="ngForm"`) in the template and use it's value property to submit data on save (`(ngSubmit)="save(form.value)"`).
 8. Add a new method `save(contact)` to  **ContactsCreatorComponent** that calls `ContactsService#addContact()` with the given contact, and navigates to **ContactsListComponent**, once the method returns.
 
 ### Additional resources and help
