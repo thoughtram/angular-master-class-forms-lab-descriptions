@@ -8,7 +8,7 @@ We can list and edit our contacts, but we don't have a way to add new ones. That
 
 ## Tasks
 
-1. Create a new component **ContactCreatorComponent** using angular-cli
+1. Create a new component **ContactsCreatorComponent** using angular-cli
 
     ```
     $ ng generate component contacts-creator
@@ -76,17 +76,17 @@ We can list and edit our contacts, but we don't have a way to add new ones. That
     </form>
   </div>
   ```
-3. Add a new route configuration that loads `ContactCreatorComponent` with the path `contact/new` (**keep in mind that it has to be defined before `contact/:id` route**)
-4. Append the following HTML to the `ContactsList` template, to create a button that links to `ContactCreatorComponent`:
+3. Add a new route configuration that loads `ContactsCreatorComponent` with the path `contact/new` (**keep in mind that it has to be defined before `contact/:id` route**)
+4. Append the following HTML to the `ContactsList` template, to create a button that links to `ContactsCreatorComponent`:
 
   ```html
-  <a md-fab title="Add a new contact" class="trm-floating-button">
-    <md-icon class="md-24" routerLink="contact/new">add</md-icon>
+  <a md-fab routerLink="contact/new" title="Add a new contact" class="trm-floating-button">
+    <md-icon class="md-24">add</md-icon>
   </a>
   ```
 
 5. Add a new method `addContact(contact: Contact)` to **ContactsService** that performs and http POST request to `http://localhost:4201/api/contacts` with a new contact data object that is passed to this method (you can use `updateContact()` as inspiration).
-6. Add `ngModel` and `ngModelGroup` to **ContactCreatorComponent**s template accordingly to submit an object structure on save that looks like this:
+6. Add `ngModel` and `ngModelGroup` to **ContactsCreatorComponent**s template accordingly to submit an object structure on save that looks like this:
 
   ```js
   {
@@ -104,7 +104,7 @@ We can list and edit our contacts, but we don't have a way to add new ones. That
   ```
 
 7. Get an `ngForm` reference in the template and use it's value property to submit data on save (`(ngSubmit)="save(contact)"`).
-8. Add a new method `save(contact)` to  **ContactCreatorComponent** that calls `ContactsService#addContact()` with the given contact, and navigates to **ContactsListComponent**, once the method returns.
+8. Add a new method `save(contact)` to  **ContactsCreatorComponent** that calls `ContactsService#addContact()` with the given contact, and navigates to **ContactsListComponent**, once the method returns.
 
 ### Additional resources and help
 
