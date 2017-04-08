@@ -32,31 +32,39 @@ We can list and edit our contacts, but we don't have a way to add new ones. That
         <md-card-content>
           <div fxLayout="column">
             <md-input-container fxFlex>
-              <input md-input placeholder="Name" name="name">
+              <input mdInput placeholder="Name" name="name">
             </md-input-container>
             <md-input-container fxFlex>
-              <input md-input placeholder="Email" name="email">
+              <input mdInput placeholder="Email" name="email">
             </md-input-container>
             <md-input-container fxFlex>
-              <input md-input placeholder="Birthday" name="birthday" type="date">
+              <input mdInput placeholder="Birthday" name="birthday" type="date">
             </md-input-container>
             <md-input-container fxFlex>
-              <input md-input placeholder="Phone" name="phone">
+              <input mdInput placeholder="Phone" name="phone">
             </md-input-container>
             <md-input-container fxFlex>
-              <input md-input placeholder="Website" name="website">
+              <input mdInput placeholder="Website" name="website">
             </md-input-container>
+            <md-radio-group name="gender">
+              <md-radio-button>
+                INSERT_GENDER_VARIANT
+              </md-radio-button>
+            </md-radio-group>
             <fieldset fxLayout="column">
               <legend>Address</legend>
               <md-input-container fxFlex>
-                <input md-input placeholder="Street" name="street">
+                <input mdInput placeholder="Street" name="street">
               </md-input-container>
               <md-input-container fxFlex>
-                <input md-input placeholder="Zip" name="zip">
+                <input mdInput placeholder="Zip" name="zip">
               </md-input-container>
               <md-input-container fxFlex>
-                <input md-input placeholder="City" name="city">
+                <input mdInput placeholder="City" name="city">
               </md-input-container>
+              <md-select placeholder="Country" name="country">
+                <md-option>INSER_COUNTRY_NAME</md-option>
+              </md-select>
             </fieldset>
           </div>
         </md-card-content>
@@ -73,7 +81,7 @@ We can list and edit our contacts, but we don't have a way to add new ones. That
 
   ```html
   <a md-fab title="Add a new contact" class="trm-floating-button">
-    <md-icon class="md-24">add</md-icon>
+    <md-icon class="md-24" routerLink="contact/new">add</md-icon>
   </a>
   ```
 
@@ -101,3 +109,9 @@ We can list and edit our contacts, but we don't have a way to add new ones. That
 ### Additional resources and help
 
 - [Template-driven Forms in Angular](http://blog.thoughtram.io/angular/2016/03/21/template-driven-forms-in-angular-2.html)
+
+
+## Next Lab
+
+Go to [Forms Lab #2: Template Validators & Error Messages](https://github.com/thoughtram/angular2-master-class-exercise-descriptions/blob/master/exercises/forms/exercise-2_template-validators-and-error-messages.md)
+
