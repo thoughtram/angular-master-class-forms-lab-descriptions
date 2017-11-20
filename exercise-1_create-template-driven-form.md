@@ -11,7 +11,7 @@ We can list and edit our contacts, but we don't have a way to add new ones. That
 1. Create a new component **ContactsCreatorComponent** using angular-cli
 
     ```
-    $ ng generate component contacts-creator
+    $ ng generate component -m app contacts-creator
     ```
     or
 
