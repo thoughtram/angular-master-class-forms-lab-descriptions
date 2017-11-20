@@ -8,7 +8,7 @@ The email field is optional, which is okay. However, we're able to enter whateve
 
 ## Tasks
 
-1. Create a new directive using angular-cli `ng generate directive email-validator`
+1. Create a new directive using angular-cli `ng generate directive -m app email-validator`
 2. Import `FormControl` from `@angular/forms` in that file
 2. Write a stand-alone **function** `validateEmail(c: FormControl)` that uses a regular expression to test the value of the given control.
   - The Regexp is: 
