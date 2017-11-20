@@ -23,56 +23,56 @@ We can list and edit our contacts, but we don't have a way to add new ones. That
   ```html
   <div class="trm-contacts-creator">
     <form>
-      <md-card>
-        <md-card-title-group>
-          <img md-card-md-image alt="Placeholder image" src="/assets/images/placeholder.png">
-          <md-card-title></md-card-title>
-          <md-card-subtitle></md-card-subtitle>
-        </md-card-title-group>
-        <md-card-content>
+      <mat-card>
+        <mat-card-title-group>
+          <img mat-card-md-image alt="Placeholder image" src="/assets/images/placeholder.png">
+          <mat-card-title></mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-card-title-group>
+        <mat-card-content>
           <div fxLayout="column">
-            <md-input-container fxFlex>
-              <input mdInput placeholder="Name" name="name">
-            </md-input-container>
-            <md-input-container fxFlex>
-              <input mdInput placeholder="Email" name="email">
-            </md-input-container>
-            <md-input-container fxFlex>
-              <input mdInput placeholder="Birthday" name="birthday" type="date">
-            </md-input-container>
-            <md-input-container fxFlex>
-              <input mdInput placeholder="Phone" name="phone">
-            </md-input-container>
-            <md-input-container fxFlex>
-              <input mdInput placeholder="Website" name="website">
-            </md-input-container>
-            <md-radio-group name="gender">
-              <md-radio-button *ngFor="let variant of gender" [value]="variant">
-              {{variant}}
-              </md-radio-button>
-            </md-radio-group>
+            <mat-input-container fxFlex>
+              <input matInput placeholder="Name" name="name">
+            </mat-input-container>
+            <mat-input-container fxFlex>
+              <input matInput placeholder="Email" name="email">
+            </mat-input-container>
+            <mat-input-container fxFlex>
+              <input matInput placeholder="Birthday" name="birthday" type="date">
+            </mat-input-container>
+            <mat-input-container fxFlex>
+              <input matInput placeholder="Phone" name="phone">
+            </mat-input-container>
+            <mat-input-container fxFlex>
+              <input matInput placeholder="Website" name="website">
+            </mat-input-container>
+            <mat-radio-group name="gender">
+              <mat-radio-button *ngFor="let variant of gender" [value]="variant">
+                {{variant}}
+              </mat-radio-button>
+            </mat-radio-group>
             <fieldset fxLayout="column">
               <legend>Address</legend>
-              <md-input-container fxFlex>
-                <input mdInput placeholder="Street" name="street">
-              </md-input-container>
-              <md-input-container fxFlex>
-                <input mdInput placeholder="Zip" name="zip">
-              </md-input-container>
-              <md-input-container fxFlex>
-                <input mdInput placeholder="City" name="city">
-              </md-input-container>
-            <md-select placeholder="Country" name="country">
-              <md-option *ngFor="let country of countries" [value]="country.name">{{ country.name }}</md-option>
-            </md-select>
+              <mat-input-container fxFlex>
+                <input matInput placeholder="Street" name="street">
+              </mat-input-container>
+              <mat-input-container fxFlex>
+                <input matInput placeholder="Zip" name="zip">
+              </mat-input-container>
+              <mat-input-container fxFlex>
+                <input matInput placeholder="City" name="city">
+              </mat-input-container>
+              <mat-select placeholder="Country" name="country">
+                <mat-option *ngFor="let country of countries" [value]="country.name">{{ country.name }}</mat-option>
+              </mat-select>
             </fieldset>
           </div>
-        </md-card-content>
-        <md-card-actions fxLayout fxLayoutAlign="center center">
-          <button md-button type="submit">Save</button>
-          <a md-button title="Cancel creating new contact">Cancel</a>
-        </md-card-actions>
-      </md-card>
+        </mat-card-content>
+        <mat-card-actions fxLayout fxLayoutAlign="center center">
+          <button mat-button type="submit">Save</button>
+          <a mat-button title="Cancel creating new contact">Cancel</a>
+        </mat-card-actions>
+      </mat-card>
     </form>
   </div>
   ```
